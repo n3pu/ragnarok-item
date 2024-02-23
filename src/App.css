@@ -1,42 +1,167 @@
+@import url("https://fonts.cdnfonts.com/css/proggy-clean");
+@import url('https://fonts.cdnfonts.com/css/inter');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ProggyCleanTT", sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.info-card {
+  display: flex;
+  gap: 4px;
+  flex-flow: column;
 }
 
-.card {
-  padding: 2em;
+.item-info-card {
+  background-color: #fff;
+  color: #000;
+  width: 300px;
+  border-radius: 8px;
+  padding: 2px;
+}
+.item-info-card.main {
+  height: 330px;
+}
+.item-info-card-frame {
+  border: 1px solid #c1c1c1;
+  height: 100%;
+  min-height: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 8px 8px;
+  position: relative;
+}
+.item-info-card-head {
+  background-size: 100%;
+  background-repeat: repeat-y;
+  border-bottom: 1px solid #c1c1c1;
+  height: 25px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+}
+.item-info-card.main .item-info-card-frame {
+  height: 100%;
+}
+.item-info-card.add .item-info-card-frame {
+  display: flex;
+  align-items: center;
+}
+.item-info-card-content {
+  display: flex;
+  gap: 4px;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+.item-info-card-content-attr {
+  padding: 8px;
+  padding-bottom: 16px;
+  margin-top: 8px;
+  height: 280px;
+  overflow-y: auto;
+}
+.item-info-card-content p {
+  line-height: 100%;
+}
+.item-info-card-content .divider {
+  padding: 4px 0;
+  line-height: 12px;
+}
+.item-info-card-content .red {
+  color: red;
+}
+.item-info-card-content .green {
+  color: #009C00;
+}
+.item-info-card-content .blue {
+  color: blue;
+}
+.item-info-card-content .purple {
+  color: #6363CE;
+}
+.item-info-card-content .link {
+  color: #009fff;
 }
 
-.read-the-docs {
-  color: #888;
+.item-image {
+  height: 100px;
+  width: 80px;
+  min-width: 80px;
+  box-shadow: 2px 2px 0 #c1c1c1;
+}
+
+.cards {
+  display: flex;
+  gap: 4px;
+}
+
+.resizer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.collections-title {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  position: relative;
+  bottom: -7px;
+  width: 100%;
+  text-align: right;
+  color: #ddd;
+  z-index: 1;
+}
+
+.close-card-button {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.item-info-card-content-attr::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+.item-info-card-content-attr::-webkit-scrollbar-corner {
+  background: url('./assets/scrollbar-bar.png');
+  background-repeat: no-repeat;
+}
+.item-info-card-content-attr::-webkit-scrollbar-track {
+}
+.item-info-card-content-attr::-webkit-scrollbar-button:vertical:increment {
+  background: url('./assets/scroll-bar-to-end.png');
+  background-repeat: no-repeat;
+}
+.item-info-card-content-attr::-webkit-scrollbar-button:vertical:decrement {
+  background: url('./assets/scroll-bar-to-start.png');
+  background-repeat: no-repeat;
+}
+.item-info-card-content-attr::-webkit-scrollbar-thumb {
+  background: url('./assets/scrollbar-bar.png');
+  background-size: 8px auto;
+  background-repeat: repeat-y;
+  background-position: 2px;
+  border-radius: 60px;
 }
